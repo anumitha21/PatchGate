@@ -11,7 +11,7 @@ STDLIB = set(__import__("sys").stdlib_module_names)
 
 def imports(path: Path) -> set[str]:
     out = set()
-    for n in ast.walk(ast.parse(path.read_text())):
+    for n in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
         if isinstance(n, ast.Import):
             out |= {a.name.split(".")[0] for a in n.names}
         elif isinstance(n, ast.ImportFrom) and n.level == 0 and n.module:
@@ -23,7 +23,7 @@ def test_core_depends_only_on_stdlib_and_allowed_packages():
     for f in CORE:
         bad = {m for m in imports(f) if m not in STDLIB and m not in ALLOWED_CORE_THIRD_PARTY and m != "patchgate"}
         assert not bad, (f.name, bad)
-        txt = f.read_text()
+        txt = f.read_text(encoding="utf-8")
         assert "from ..adapters" not in txt and "from ..hooks" not in txt and "import mcp" not in txt
 
 
@@ -39,19 +39,19 @@ def test_only_commit_module_writes_user_files():
     for f in CORE:
         if f.name in ("commit.py", "telemetry.py"):  # telemetry writes only under .patchgate/
             continue
-        assert not pat.search(f.read_text()), f.name
+        assert not pat.search(f.read_text(encoding="utf-8")), f.name
 
 
 def test_core_and_adapter_are_editor_agnostic():
     pat = re.compile(r"claude|cursor|vs ?code|antigravity|MultiEdit|NotebookEdit|PreToolUse", re.IGNORECASE)
     for f in CORE + [SRC / "adapters" / "mcp_server.py"]:
-        hits = pat.findall(f.read_text())
+        hits = pat.findall(f.read_text(encoding="utf-8"))
         assert not hits, (f.name, hits)
 
 
 def test_no_print_in_mcp_process_modules():
     for f in CORE + [SRC / "adapters" / "mcp_server.py"]:
-        assert not re.search(r"(?<![\w.])print\(", f.read_text()), f.name
+        assert not re.search(r"(?<![\w.])print\(", f.read_text(encoding="utf-8")), f.name
 
 
 def test_no_hardcoded_latency_promises_anywhere():
@@ -59,4 +59,4 @@ def test_no_hardcoded_latency_promises_anywhere():
     for f in list(SRC.rglob("*.py")) + list((root / "docs").glob("*.md")) + [root / "README.md"]:
         if f.exists():
             assert not re.search(r"\b\d+\s?ms\b.*\b(guarantee|promise|always|under)\b|\b(<|under)\s*\d+\s?ms\b",
-                                 f.read_text(), re.IGNORECASE), f.name
+                                 f.read_text(encoding="utf-8"), re.IGNORECASE), f.name

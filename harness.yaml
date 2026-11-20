@@ -1,0 +1,33 @@
+version: 1
+read_denied:       [".env", ".env.*", "**/*.pem", "**/*.key", "**/secrets.*"]
+write_protected:   ["tests/**", "test_*.py", "**/test_*.py", "**/*_test.py",
+                    "**/conftest.py", ".github/**", "harness.yaml", "pyproject.toml"]
+test_globs:        ["tests/**", "**/test_*.py", "**/*_test.py"]   # AST test-tamper rules apply here
+ignore_dirs:       [".git", ".venv", "venv", "node_modules", "__pycache__", ".patchgate", "build", "dist"]
+limits:
+  max_file_bytes: 1000000
+  max_batch_files: 20
+ast_rules:
+  block_syntax_errors: true
+  block_deleted_asserts: true
+  block_trivial_asserts: true
+  block_test_skip_decorators: true
+  block_deleted_test_functions: true
+  block_secrets: true
+secret_regexes:
+  - '-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----'
+  - 'AKIA[0-9A-Z]{16}'
+  - 'ghp_[A-Za-z0-9]{36}'
+  - 'sk-[A-Za-z0-9]{20,}'
+lsp:
+  server_command: null            # null => auto-detect via shutil.which
+  python_path: null               # optional interpreter hint (see docs/VERIFIED_FACTS.md)
+  block_on: ["error"]             # warnings are reported but do not block
+  timeout_sec: 10
+  quiescence_ms: 150
+  on_timeout: "allow_with_warning" # or "reject"
+  max_open_documents: 200
+  dependents_depth: 1
+  max_dependents: 50
+circuit_breaker:
+  max_consecutive_failures_per_file: 4

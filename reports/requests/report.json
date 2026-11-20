@@ -1,0 +1,3153 @@
+{
+  "environment": {
+    "repo": "requests",
+    "repo_commit": "3c7baaa",
+    "python_files_in_repo": 20,
+    "files_sampled": 19,
+    "samples_requested": 20,
+    "dependents_per_sampled_file (mean/max)": "5.6/14",
+    "pyright": "pyright 1.1.414",
+    "python": "3.13.18",
+    "os": "Linux 6.18.44-fc-v653",
+    "lsp.python_path": "/home/claude/patchgate/.venv/bin/python",
+    "lsp.timeout_sec": 10,
+    "lsp.quiescence_ms": 150,
+    "wall_time_sec (both passes)": 376.2,
+    "fixed_signature cases skipped": "{\"fixed_signature_protected_callers\": 4, \"fixed_signature_generation_error\": 0}"
+  },
+  "with_loose_fallback": {
+    "matrix": {
+      "benign_comment": {
+        "ACCEPTED": 19
+      },
+      "benign_whitespace": {
+        "ACCEPTED": 19
+      },
+      "broken_undefined_name": {
+        "REJECTED_LSP": 19
+      },
+      "broken_syntax": {
+        "REJECTED_AST": 19
+      },
+      "broken_signature": {
+        "REJECTED_LSP": 6
+      },
+      "fixed_signature_multifile": {
+        "ACCEPTED": 2
+      }
+    },
+    "counts": {
+      "benign_comment": 19,
+      "benign_whitespace": 19,
+      "broken_undefined_name": 19,
+      "broken_syntax": 19,
+      "broken_signature": 6,
+      "fixed_signature_multifile": 2
+    },
+    "false_block_rate_benign": 0.0,
+    "false_blocks_benign": "0/38",
+    "false_block_rate_fixed_signature": 0.0,
+    "false_blocks_fixed_signature": "0/2",
+    "miss_rate_broken": 0.0,
+    "misses_broken": "0/44",
+    "timeouts": 0,
+    "unexpected": []
+  },
+  "without_loose_fallback": {
+    "matrix": {
+      "benign_comment": {
+        "ACCEPTED": 19
+      },
+      "benign_whitespace": {
+        "ACCEPTED": 19
+      },
+      "broken_undefined_name": {
+        "REJECTED_LSP": 19
+      },
+      "broken_syntax": {
+        "REJECTED_AST": 19
+      },
+      "broken_signature": {
+        "REJECTED_LSP": 6
+      },
+      "fixed_signature_multifile": {
+        "ACCEPTED": 2
+      }
+    },
+    "counts": {
+      "benign_comment": 19,
+      "benign_whitespace": 19,
+      "broken_undefined_name": 19,
+      "broken_syntax": 19,
+      "broken_signature": 6,
+      "fixed_signature_multifile": 2
+    },
+    "false_block_rate_benign": 0.0,
+    "false_blocks_benign": "0/38",
+    "false_block_rate_fixed_signature": 0.0,
+    "false_blocks_fixed_signature": "0/2",
+    "miss_rate_broken": 0.0,
+    "misses_broken": "0/44",
+    "timeouts": 0,
+    "unexpected": []
+  },
+  "latency": {
+    "cold": {
+      "total_ms": {
+        "count": 1,
+        "p50": 6605.89233799999,
+        "p95": 6605.89233799999,
+        "p99": 6605.89233799999
+      },
+      "lsp_total_ms": {
+        "count": 1,
+        "p50": 6395.659486,
+        "p95": 6395.659486,
+        "p99": 6395.659486
+      }
+    },
+    "warm": {
+      "total_ms": {
+        "count": 83,
+        "p50": 1634.7735379999904,
+        "p95": 3180.247093999924,
+        "p99": 3692.49020999996
+      },
+      "lsp_total_ms": {
+        "count": 64,
+        "p50": 1664.8298080001496,
+        "p95": 3301.779828000008,
+        "p99": 3673.165069000106
+      }
+    },
+    "note": "nearest-rank percentiles; cold has n=1 per run by definition"
+  },
+  "records_with_loose_fallback": [
+    {
+      "case": "benign_comment",
+      "file": "src/requests/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0395039999148139,
+        "ast_ms": 1.1880609999934677,
+        "lsp_baseline_ms": 4116.521842999987,
+        "lsp_apply_ms": 0.32320399998297944,
+        "lsp_wait_ms": 2278.330976999996,
+        "lsp_total_ms": 6395.659486,
+        "total_ms": 6605.89233799999
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.050670999939939065,
+        "ast_ms": 1.1891919999698075,
+        "lsp_baseline_ms": 0.9100280000211569,
+        "lsp_apply_ms": 0.27407599998241494,
+        "lsp_wait_ms": 1560.368980000021,
+        "lsp_total_ms": 1561.9252970000161,
+        "total_ms": 1581.6016659999832
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/__init__.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.05499899998540059,
+        "ast_ms": 1.2534469999536668,
+        "lsp_baseline_ms": 0.9799919999977647,
+        "lsp_apply_ms": 0.2455759999975271,
+        "lsp_wait_ms": 1422.6326590001008,
+        "lsp_total_ms": 1424.1758560000335,
+        "total_ms": 1445.5414430000246
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/__init__.py:221: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/__init__.py:221: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/__init__.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.049631000024419336,
+        "ast_ms": 2.062878000060664,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.1390210000618026
+      },
+      "message": "src/requests/__init__.py: [syntax_error] syntax error introduced near line 221"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/__version__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.022345999923345516,
+        "ast_ms": 0.14125799998510047,
+        "lsp_baseline_ms": 1453.1088789999558,
+        "lsp_apply_ms": 0.13815400006933487,
+        "lsp_wait_ms": 1332.8951519999919,
+        "lsp_total_ms": 2786.310753000066,
+        "total_ms": 2786.9680070000413
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/__version__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04543199997897318,
+        "ast_ms": 0.19358300005478668,
+        "lsp_baseline_ms": 0.20800499999040767,
+        "lsp_apply_ms": 0.1187200000458688,
+        "lsp_wait_ms": 1512.738264999939,
+        "lsp_total_ms": 1513.281543000062,
+        "total_ms": 1514.091485999984
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/__version__.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.07606100007251371,
+        "ast_ms": 0.21467599992774922,
+        "lsp_baseline_ms": 0.2490619999662158,
+        "lsp_apply_ms": 0.19975400005023403,
+        "lsp_wait_ms": 1498.6444779999601,
+        "lsp_total_ms": 1499.2760819999376,
+        "total_ms": 1500.1769410000634
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/__version__.py:16: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/__version__.py:16: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/__version__.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03364600001987128,
+        "ast_ms": 0.20975399991129962,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.253075999921748
+      },
+      "message": "src/requests/__version__.py: [syntax_error] syntax error introduced near line 16"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/_internal_utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05273600004329637,
+        "ast_ms": 0.2744180000036067,
+        "lsp_baseline_ms": 1547.2375360000115,
+        "lsp_apply_ms": 0.23332299997491646,
+        "lsp_wait_ms": 1558.879867000087,
+        "lsp_total_ms": 3106.6469220000954,
+        "total_ms": 3110.727665000013
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/_internal_utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.056256999982906564,
+        "ast_ms": 0.6339399999433226,
+        "lsp_baseline_ms": 0.6491689999847949,
+        "lsp_apply_ms": 0.26078100006543536,
+        "lsp_wait_ms": 1476.8143159999454,
+        "lsp_total_ms": 1478.0844790000174,
+        "total_ms": 1483.2703019999371
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/_internal_utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04460399998151843,
+        "ast_ms": 0.41653499999938504,
+        "lsp_baseline_ms": 0.41656000007606053,
+        "lsp_apply_ms": 0.162752000051114,
+        "lsp_wait_ms": 1713.769958999933,
+        "lsp_total_ms": 1714.6073029999798,
+        "total_ms": 1719.8090690000072
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/_internal_utils.py:53: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/_internal_utils.py:53: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/_internal_utils.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.08268100009445334,
+        "ast_ms": 0.6680120000055467,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.7696320000150081
+      },
+      "message": "src/requests/_internal_utils.py: [syntax_error] syntax error introduced near line 53"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/_types.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.024865000000318105,
+        "ast_ms": 1.1844489999930374,
+        "lsp_baseline_ms": 1551.1544430000868,
+        "lsp_apply_ms": 0.24097800007893966,
+        "lsp_wait_ms": 1865.814126000032,
+        "lsp_total_ms": 3417.4445589999323,
+        "total_ms": 3419.501078000053
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/_types.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.09332299998732196,
+        "ast_ms": 2.221265000002859,
+        "lsp_baseline_ms": 0.6341170000041529,
+        "lsp_apply_ms": 0.28388900000209105,
+        "lsp_wait_ms": 1627.5267649999705,
+        "lsp_total_ms": 1628.7118490000694,
+        "total_ms": 1632.3642490000339
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/_types.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.050352000016573584,
+        "ast_ms": 1.2559819999751198,
+        "lsp_baseline_ms": 0.44622699999763427,
+        "lsp_apply_ms": 0.23553500000161876,
+        "lsp_wait_ms": 1524.6451780000143,
+        "lsp_total_ms": 1525.5857590000232,
+        "total_ms": 1528.0632149999747
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/_types.py:190: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/_types.py:190: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/_types.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.050145000045631605,
+        "ast_ms": 3.115370000045914,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 3.187625000009575
+      },
+      "message": "src/requests/_types.py: [syntax_error] syntax error introduced near line 190"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/adapters.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.036227999999027816,
+        "ast_ms": 3.5653489999276644,
+        "lsp_baseline_ms": 1577.9676010000685,
+        "lsp_apply_ms": 0.5141249999951469,
+        "lsp_wait_ms": 1511.6607149999481,
+        "lsp_total_ms": 3090.4257290000032,
+        "total_ms": 3112.618019000024
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/adapters.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.055447000022468274,
+        "ast_ms": 4.714887999966777,
+        "lsp_baseline_ms": 0.6742599999824961,
+        "lsp_apply_ms": 0.3114400000185924,
+        "lsp_wait_ms": 1598.7100999999484,
+        "lsp_total_ms": 1599.9477049999768,
+        "total_ms": 1626.4715249999426
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/adapters.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.05409300001701922,
+        "ast_ms": 4.115577999982634,
+        "lsp_baseline_ms": 0.5371800000375515,
+        "lsp_apply_ms": 0.23468699998829834,
+        "lsp_wait_ms": 1631.2129619999496,
+        "lsp_total_ms": 1632.21058299996,
+        "total_ms": 1650.3629030000866
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/adapters.py:750: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/adapters.py:750: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/adapters.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0419860000420158,
+        "ast_ms": 4.9191099999461585,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 4.981233000080465
+      },
+      "message": "src/requests/adapters.py: [syntax_error] syntax error introduced near line 750"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/api.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.028067000016562815,
+        "ast_ms": 0.6807209999806219,
+        "lsp_baseline_ms": 0.08381999998618994,
+        "lsp_apply_ms": 0.10795499997584557,
+        "lsp_wait_ms": 1622.4425870000232,
+        "lsp_total_ms": 1622.7919950000569,
+        "total_ms": 1623.9005859999907
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/api.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.048732999971434765,
+        "ast_ms": 0.7252589999779957,
+        "lsp_baseline_ms": 0.10390399995685584,
+        "lsp_apply_ms": 0.13297400005285454,
+        "lsp_wait_ms": 1697.1373369999583,
+        "lsp_total_ms": 1697.5269260000232,
+        "total_ms": 1698.683879999976
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/api.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.038520999964930525,
+        "ast_ms": 0.6473299999925075,
+        "lsp_baseline_ms": 0.08279000007860304,
+        "lsp_apply_ms": 0.11351499995271297,
+        "lsp_wait_ms": 1772.6877380000587,
+        "lsp_total_ms": 1773.0353599999944,
+        "total_ms": 1774.2161920000399
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/api.py:182: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/api.py:182: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/api.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03850199993848946,
+        "ast_ms": 1.1243399999329995,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.1765979999154297
+      },
+      "message": "src/requests/api.py: [syntax_error] syntax error introduced near line 182"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/auth.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.020963999986634008,
+        "ast_ms": 3.876982999940992,
+        "lsp_baseline_ms": 0.5919049999647541,
+        "lsp_apply_ms": 0.2044289999503235,
+        "lsp_wait_ms": 1649.0995220000286,
+        "lsp_total_ms": 1650.1146440000412,
+        "total_ms": 1667.3315479999928
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/auth.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05730299994866073,
+        "ast_ms": 4.335842000045886,
+        "lsp_baseline_ms": 0.7072540000763183,
+        "lsp_apply_ms": 0.2597799999648487,
+        "lsp_wait_ms": 1632.0217009999851,
+        "lsp_total_ms": 1633.253706000005,
+        "total_ms": 1656.18619199995
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/auth.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.047741000003043155,
+        "ast_ms": 2.7495410000710763,
+        "lsp_baseline_ms": 0.5852130000221223,
+        "lsp_apply_ms": 0.20927399998527108,
+        "lsp_wait_ms": 1550.8480050000344,
+        "lsp_total_ms": 1551.8472180000344,
+        "total_ms": 1573.059239000031
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/auth.py:356: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/auth.py:356: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/auth.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05122100003518426,
+        "ast_ms": 5.440149000037309,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 5.516437999972368
+      },
+      "message": "src/requests/auth.py: [syntax_error] syntax error introduced near line 356"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/certs.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03678300004139601,
+        "ast_ms": 0.1467920000095546,
+        "lsp_baseline_ms": 1579.3247130000054,
+        "lsp_apply_ms": 0.11383200001091609,
+        "lsp_wait_ms": 1600.074247000066,
+        "lsp_total_ms": 3179.660760000047,
+        "total_ms": 3180.247093999924
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/certs.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.057964000006904826,
+        "ast_ms": 0.19220500007577357,
+        "lsp_baseline_ms": 0.14530699991155416,
+        "lsp_apply_ms": 0.11828199990304711,
+        "lsp_wait_ms": 1687.6374850000957,
+        "lsp_total_ms": 1688.0669330000728,
+        "total_ms": 1688.7244290001036
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/certs.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.10642899997037603,
+        "ast_ms": 0.16994399993564002,
+        "lsp_baseline_ms": 0.1464459999169776,
+        "lsp_apply_ms": 0.09636699996917741,
+        "lsp_wait_ms": 1700.7294610000372,
+        "lsp_total_ms": 1701.1150789999192,
+        "total_ms": 1701.8585280000025
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/certs.py:20: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/certs.py:20: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/certs.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.038848000031066476,
+        "ast_ms": 0.2629440000418981,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.31376100014313124
+      },
+      "message": "src/requests/certs.py: [syntax_error] syntax error introduced near line 20"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/compat.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.015218000044114888,
+        "ast_ms": 0.5897149999327667,
+        "lsp_baseline_ms": 1743.305196999927,
+        "lsp_apply_ms": 0.454585999932533,
+        "lsp_wait_ms": 1805.629308999869,
+        "lsp_total_ms": 3549.7829579999234,
+        "total_ms": 3568.713588000037
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/compat.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05994200000714045,
+        "ast_ms": 0.936302999889449,
+        "lsp_baseline_ms": 1.243493999936618,
+        "lsp_apply_ms": 0.3278519998275442,
+        "lsp_wait_ms": 1713.0405939999491,
+        "lsp_total_ms": 1714.9837130000378,
+        "total_ms": 1749.5682769999803
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/compat.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04544500006886665,
+        "ast_ms": 0.6320699999378121,
+        "lsp_baseline_ms": 0.956554000140386,
+        "lsp_apply_ms": 0.2520649998132285,
+        "lsp_wait_ms": 1818.1022369999482,
+        "lsp_total_ms": 1819.662689000097,
+        "total_ms": 1839.2370289998325
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/compat.py:117: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/compat.py:117: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/compat.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0818779999463004,
+        "ast_ms": 0.7742840000446449,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.8719460001884727
+      },
+      "message": "src/requests/compat.py: [syntax_error] syntax error introduced near line 117"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/cookies.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.01889899999696354,
+        "ast_ms": 3.5166760001175135,
+        "lsp_baseline_ms": 0.4817989999992278,
+        "lsp_apply_ms": 0.24425900005553558,
+        "lsp_wait_ms": 1711.2490859999525,
+        "lsp_total_ms": 1712.2131220000938,
+        "total_ms": 1733.2124350000413
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/cookies.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.043537000010474,
+        "ast_ms": 3.781183000000965,
+        "lsp_baseline_ms": 0.7666679998692416,
+        "lsp_apply_ms": 0.26978200003213715,
+        "lsp_wait_ms": 1605.3305500001898,
+        "lsp_total_ms": 1606.6987080000672,
+        "total_ms": 1635.6773729999077
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/cookies.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04214099999444443,
+        "ast_ms": 3.5202940000544913,
+        "lsp_baseline_ms": 0.7920649998141016,
+        "lsp_apply_ms": 0.2636839999468066,
+        "lsp_wait_ms": 1430.086663000111,
+        "lsp_total_ms": 1431.4327470001444,
+        "total_ms": 1450.8966180001153
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/cookies.py:627: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/cookies.py:627: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/cookies.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.035555000067688525,
+        "ast_ms": 4.727849999881073,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 4.780178999908458
+      },
+      "message": "src/requests/cookies.py: [syntax_error] syntax error introduced near line 627"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/exceptions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.022553999997398932,
+        "ast_ms": 0.6169640000734944,
+        "lsp_baseline_ms": 0.39631799995731853,
+        "lsp_apply_ms": 0.15470399989681027,
+        "lsp_wait_ms": 1621.239093999975,
+        "lsp_total_ms": 1621.9889779999903,
+        "total_ms": 1634.7735379999904
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/exceptions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.09071499994206533,
+        "ast_ms": 0.7238180000967986,
+        "lsp_baseline_ms": 0.5738069999097206,
+        "lsp_apply_ms": 0.18021400001089205,
+        "lsp_wait_ms": 1694.230757000014,
+        "lsp_total_ms": 1695.2268380000532,
+        "total_ms": 1709.3759089998457
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/exceptions.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.051728000016737496,
+        "ast_ms": 0.8078559999376012,
+        "lsp_baseline_ms": 0.599597000018548,
+        "lsp_apply_ms": 0.17799900001591595,
+        "lsp_wait_ms": 1721.951133000175,
+        "lsp_total_ms": 1723.0552720000105,
+        "total_ms": 1744.2724710001585
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/exceptions.py:164: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/exceptions.py:164: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/exceptions.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04936699997415417,
+        "ast_ms": 1.422666000053141,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.4926639998975588
+      },
+      "message": "src/requests/exceptions.py: [syntax_error] syntax error introduced near line 164"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/help.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.027210000098421006,
+        "ast_ms": 1.2651019999339042,
+        "lsp_baseline_ms": 1895.71970399993,
+        "lsp_apply_ms": 0.16063700013546622,
+        "lsp_wait_ms": 425.2228989998912,
+        "lsp_total_ms": 2321.242242999915,
+        "total_ms": 2322.8959900000063
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/help.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04729099987343943,
+        "ast_ms": 0.9584950000771641,
+        "lsp_baseline_ms": 0.08131399999911082,
+        "lsp_apply_ms": 0.10828500012394215,
+        "lsp_wait_ms": 421.64681300005213,
+        "lsp_total_ms": 421.97899400002825,
+        "total_ms": 423.3330219999516
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/help.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.05634200010717905,
+        "ast_ms": 1.8447060001562932,
+        "lsp_baseline_ms": 0.10408000002826157,
+        "lsp_apply_ms": 0.20289400004003255,
+        "lsp_wait_ms": 426.5820440000425,
+        "lsp_total_ms": 427.0492320001722,
+        "total_ms": 429.48565799997596
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/help.py:134: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/help.py:134: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/help.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.038122999967526994,
+        "ast_ms": 1.4408829999865702,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.493865999918853
+      },
+      "message": "src/requests/help.py: [syntax_error] syntax error introduced near line 134"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/hooks.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.017984999885811703,
+        "ast_ms": 0.2847420000762213,
+        "lsp_baseline_ms": 0.5062929999439802,
+        "lsp_apply_ms": 0.12398700005178398,
+        "lsp_wait_ms": 1825.814593999894,
+        "lsp_total_ms": 1826.6498220000358,
+        "total_ms": 1842.8792520001025
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/hooks.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.23482099982174987,
+        "ast_ms": 0.433552000004056,
+        "lsp_baseline_ms": 0.5682900000465452,
+        "lsp_apply_ms": 0.13876000002710498,
+        "lsp_wait_ms": 1553.9568490000875,
+        "lsp_total_ms": 1554.8642960000052,
+        "total_ms": 1568.8710729998547
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/hooks.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.035964000062449486,
+        "ast_ms": 0.4155650001393951,
+        "lsp_baseline_ms": 0.434114999961821,
+        "lsp_apply_ms": 0.15526700008194894,
+        "lsp_wait_ms": 1488.158637999959,
+        "lsp_total_ms": 1488.9481170000636,
+        "total_ms": 1522.9649130001235
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/hooks.py:50: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/hooks.py:50: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/hooks.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.039672999946560594,
+        "ast_ms": 0.8060680002017762,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.8766050000303949
+      },
+      "message": "src/requests/hooks.py: [syntax_error] syntax error introduced near line 50"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/models.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04694200015364913,
+        "ast_ms": 7.698376999996981,
+        "lsp_baseline_ms": 0.6807259999277449,
+        "lsp_apply_ms": 0.3333679999286687,
+        "lsp_wait_ms": 1635.6880010000623,
+        "lsp_total_ms": 1637.0870949999698,
+        "total_ms": 1669.2436450000514
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/models.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04194000007373688,
+        "ast_ms": 6.890122999948289,
+        "lsp_baseline_ms": 0.7745959999283514,
+        "lsp_apply_ms": 0.3593139999793493,
+        "lsp_wait_ms": 1473.3626789998198,
+        "lsp_total_ms": 1474.761861999923,
+        "total_ms": 1495.0739690000319
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/models.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.06090499982747133,
+        "ast_ms": 10.954371000025276,
+        "lsp_baseline_ms": 0.9881199998744705,
+        "lsp_apply_ms": 0.4765010000937764,
+        "lsp_wait_ms": 1512.3356250001052,
+        "lsp_total_ms": 1514.359850999881,
+        "total_ms": 1540.1733159999367
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:1186: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/models.py:1186: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/models.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0388860000839486,
+        "ast_ms": 12.386511999920913,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 12.445050999986051
+      },
+      "message": "src/requests/models.py: [syntax_error] syntax error introduced near line 1186"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/packages.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.025672999981907196,
+        "ast_ms": 0.3477079999356647,
+        "lsp_baseline_ms": 0.08404900017922046,
+        "lsp_apply_ms": 0.09856499991656165,
+        "lsp_wait_ms": 1708.930324999983,
+        "lsp_total_ms": 1709.287957000015,
+        "total_ms": 1709.9143870000262
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/packages.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03738899999916612,
+        "ast_ms": 0.3106039998783672,
+        "lsp_baseline_ms": 0.08001000014701276,
+        "lsp_apply_ms": 0.10037999982159818,
+        "lsp_wait_ms": 1506.8383620000532,
+        "lsp_total_ms": 1507.1604729998853,
+        "total_ms": 1507.797913999866
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/packages.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.039230999846040504,
+        "ast_ms": 0.39902899993649044,
+        "lsp_baseline_ms": 0.08172499997272098,
+        "lsp_apply_ms": 0.12005899998257519,
+        "lsp_wait_ms": 1677.9755370000657,
+        "lsp_total_ms": 1678.353879000042,
+        "total_ms": 1679.202266999937
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/packages.py:25: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/packages.py:25: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/packages.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04706200002146943,
+        "ast_ms": 0.7127680000849068,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.7793699999183445
+      },
+      "message": "src/requests/packages.py: [syntax_error] syntax error introduced near line 25"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/sessions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.026235999939672183,
+        "ast_ms": 7.2429450001436635,
+        "lsp_baseline_ms": 0.4315179999139218,
+        "lsp_apply_ms": 0.2204600000368373,
+        "lsp_wait_ms": 1548.6638859999857,
+        "lsp_total_ms": 1549.5017160001225,
+        "total_ms": 1570.2853180000602
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/sessions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.062330999980986235,
+        "ast_ms": 8.467435000056867,
+        "lsp_baseline_ms": 0.4518309999639314,
+        "lsp_apply_ms": 0.33479299986538535,
+        "lsp_wait_ms": 1661.6975169999932,
+        "lsp_total_ms": 1662.6623449999443,
+        "total_ms": 1685.528541999929
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/sessions.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.07968199997776537,
+        "ast_ms": 8.689448000041011,
+        "lsp_baseline_ms": 0.6621340000947384,
+        "lsp_apply_ms": 0.38269000015134225,
+        "lsp_wait_ms": 1509.4271440000284,
+        "lsp_total_ms": 1510.7388930000525,
+        "total_ms": 1532.7530800000204
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/sessions.py:922: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/sessions.py:922: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/sessions.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04014800015283981,
+        "ast_ms": 6.3883220000207075,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 6.448374000001422
+      },
+      "message": "src/requests/sessions.py: [syntax_error] syntax error introduced near line 922"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/status_codes.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.024842000129865482,
+        "ast_ms": 0.9956869998859474,
+        "lsp_baseline_ms": 1580.4727219999677,
+        "lsp_apply_ms": 0.2261639999687759,
+        "lsp_wait_ms": 1720.8903709999959,
+        "lsp_total_ms": 3301.779828000008,
+        "total_ms": 3303.343032999919
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/status_codes.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.049734999947759206,
+        "ast_ms": 1.2476899999001034,
+        "lsp_baseline_ms": 0.21415199989860412,
+        "lsp_apply_ms": 0.14135500009615498,
+        "lsp_wait_ms": 1335.945391000223,
+        "lsp_total_ms": 1336.4504769999712,
+        "total_ms": 1338.4295299999849
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/status_codes.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04968200005350809,
+        "ast_ms": 1.1572129999422032,
+        "lsp_baseline_ms": 0.28172799989079067,
+        "lsp_apply_ms": 0.18596800009618164,
+        "lsp_wait_ms": 1682.4021439999797,
+        "lsp_total_ms": 1683.0366410001716,
+        "total_ms": 1684.9982019998606
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/status_codes.py:130: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/status_codes.py:130: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/status_codes.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04496499991546443,
+        "ast_ms": 1.7927909998434188,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.869618000000628
+      },
+      "message": "src/requests/status_codes.py: [syntax_error] syntax error introduced near line 130"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/structures.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.020230999780324055,
+        "ast_ms": 0.8904050000637653,
+        "lsp_baseline_ms": 1771.4496940000117,
+        "lsp_apply_ms": 0.24503800000275078,
+        "lsp_wait_ms": 1901.0987510000632,
+        "lsp_total_ms": 3673.165069000106,
+        "total_ms": 3692.49020999996
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/structures.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.047967999989850796,
+        "ast_ms": 0.9837800000696006,
+        "lsp_baseline_ms": 0.8059699998739234,
+        "lsp_apply_ms": 0.21672699995178846,
+        "lsp_wait_ms": 1838.287138999931,
+        "lsp_total_ms": 1839.606902000014,
+        "total_ms": 1865.3613380001843
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/structures.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04615200009538967,
+        "ast_ms": 1.1680360000809742,
+        "lsp_baseline_ms": 2.0269569999982195,
+        "lsp_apply_ms": 0.2549210000779567,
+        "lsp_wait_ms": 1621.338815999934,
+        "lsp_total_ms": 1623.951371000203,
+        "total_ms": 1655.7485529999667
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/structures.py:132: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/structures.py:132: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/structures.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.059649000149875064,
+        "ast_ms": 2.167282000073101,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.2601800001211814
+      },
+      "message": "src/requests/structures.py: [syntax_error] syntax error introduced near line 132"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0450899999577814,
+        "ast_ms": 11.6744590000053,
+        "lsp_baseline_ms": 0.5267320000257314,
+        "lsp_apply_ms": 0.44671000000562344,
+        "lsp_wait_ms": 1806.9433079999726,
+        "lsp_total_ms": 1808.180099000083,
+        "total_ms": 1824.8486150000645
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04787399984707008,
+        "ast_ms": 7.230714000115768,
+        "lsp_baseline_ms": 0.4359999998087005,
+        "lsp_apply_ms": 0.31387300009555474,
+        "lsp_wait_ms": 1653.573026999993,
+        "lsp_total_ms": 1654.549606000046,
+        "total_ms": 1666.5035319999788
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.051890999884562916,
+        "ast_ms": 7.94247799990444,
+        "lsp_baseline_ms": 0.48903199990490975,
+        "lsp_apply_ms": 0.2866929999072454,
+        "lsp_wait_ms": 1746.1963260000175,
+        "lsp_total_ms": 1747.2290559999237,
+        "total_ms": 1761.4559420001115
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/utils.py:1157: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/utils.py:1157: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/utils.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0395059998936631,
+        "ast_ms": 12.427511999931085,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 12.518953999915539
+      },
+      "message": "src/requests/utils.py: [syntax_error] syntax error introduced near line 1157"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/_internal_utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.06498199991256115,
+        "ast_ms": 0.45677599996452045,
+        "lsp_baseline_ms": 0.2887800001190044,
+        "lsp_apply_ms": 0.16732599988245056,
+        "lsp_wait_ms": 1811.9538969999667,
+        "lsp_total_ms": 1812.6811090000956,
+        "total_ms": 1819.6958089999953
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:528: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\ntests/test_utils.py:822: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/_types.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 14,
+      "timings": {
+        "policy_ms": 0.07052399996609893,
+        "ast_ms": 4.731237999976656,
+        "lsp_baseline_ms": 0.34335400005147676,
+        "lsp_apply_ms": 0.23624699997526477,
+        "lsp_wait_ms": 2030.1583860000392,
+        "lsp_total_ms": 2030.977496999867,
+        "total_ms": 2037.060558000121
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:163: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/models.py:164: Type \"Iterable[tuple[Any, Any]] | SupportsItems[Any, Any] | SupportsRead[str | bytes]\" is not assignable to return type "
+    },
+    {
+      "case": "fixed_signature_multifile",
+      "file": "src/requests/_types.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04844599993703014,
+        "ast_ms": 8.707948999926884,
+        "lsp_baseline_ms": 0.6087940000725212,
+        "lsp_apply_ms": 0.43557800017879345,
+        "lsp_wait_ms": 1503.691228999969,
+        "lsp_total_ms": 1505.1253530000395,
+        "total_ms": 1530.1628580000397
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/auth.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 7,
+      "timings": {
+        "policy_ms": 0.03983100009463669,
+        "ast_ms": 2.656777000083821,
+        "lsp_baseline_ms": 0.5685469998297776,
+        "lsp_apply_ms": 0.1786919999631209,
+        "lsp_wait_ms": 1778.7392210000235,
+        "lsp_total_ms": 1779.6763640001245,
+        "total_ms": 1810.7843829998274
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/auth.py:112: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/auth.py:120: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/adapters.py:630: Argument missing for pa"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/cookies.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 6,
+      "timings": {
+        "policy_ms": 0.021993000018483144,
+        "ast_ms": 3.5363940000934235,
+        "lsp_baseline_ms": 0.4757670001254155,
+        "lsp_apply_ms": 0.2523279999877559,
+        "lsp_wait_ms": 1690.5114789999516,
+        "lsp_total_ms": 1691.4752650000082,
+        "total_ms": 1713.6590020002131
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/adapters.py:395: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/auth.py:304: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/sessions.py:267: Argument missing fo"
+    },
+    {
+      "case": "fixed_signature_multifile",
+      "file": "src/requests/cookies.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0648979998914001,
+        "ast_ms": 13.841100000036022,
+        "lsp_baseline_ms": 0.5156050001460244,
+        "lsp_apply_ms": 0.5215500000304019,
+        "lsp_wait_ms": 1790.9161439999934,
+        "lsp_total_ms": 1792.2457490001307,
+        "total_ms": 1825.2922429999217
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/hooks.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.0638890001027903,
+        "ast_ms": 0.6891119999181683,
+        "lsp_baseline_ms": 0.7807860001776135,
+        "lsp_apply_ms": 0.197293999917747,
+        "lsp_wait_ms": 1663.5960080000132,
+        "lsp_total_ms": 1664.8298080001496,
+        "total_ms": 1682.0439399998577
+      },
+      "message": "New static-analysis errors introduced by this batch:\ntests/test_hooks.py:18: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 22,
+      "timings": {
+        "policy_ms": 0.026140000045415945,
+        "ast_ms": 6.343777000211048,
+        "lsp_baseline_ms": 0.4205299999284762,
+        "lsp_apply_ms": 0.2752170000803744,
+        "lsp_wait_ms": 1672.431521999897,
+        "lsp_total_ms": 1673.3615820000978,
+        "total_ms": 1684.2681620000803
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:605: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/models.py:605: Type of \"length\" is unknown [reportUnknownVariableType]\nsrc/requests/models.py:628: Argument type is unknown\n\u00a0\u00a0Argument "
+    }
+  ],
+  "records_without_loose_fallback": [
+    {
+      "case": "benign_comment",
+      "file": "src/requests/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.034358999982941896,
+        "ast_ms": 1.2064250001913024,
+        "lsp_baseline_ms": 4057.0045659999323,
+        "lsp_apply_ms": 0.41457699990132824,
+        "lsp_wait_ms": 2246.107228000028,
+        "lsp_total_ms": 6303.922209999882,
+        "total_ms": 6492.398005000041
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0536649999958172,
+        "ast_ms": 1.1620489999586425,
+        "lsp_baseline_ms": 0.9597640000720276,
+        "lsp_apply_ms": 0.29318599990801886,
+        "lsp_wait_ms": 1785.1536159998886,
+        "lsp_total_ms": 1786.7746919998808,
+        "total_ms": 1806.45751499992
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/__init__.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.046591000000262284,
+        "ast_ms": 1.2245120001352916,
+        "lsp_baseline_ms": 1.032771999916804,
+        "lsp_apply_ms": 0.28034100000695616,
+        "lsp_wait_ms": 1700.8503549998295,
+        "lsp_total_ms": 1702.7493820000927,
+        "total_ms": 1728.936979999844
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/__init__.py:221: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/__init__.py:221: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/__init__.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.039679000110481866,
+        "ast_ms": 1.5412820000619831,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.597843999888937
+      },
+      "message": "src/requests/__init__.py: [syntax_error] syntax error introduced near line 221"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/__version__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.024692999886610778,
+        "ast_ms": 0.0983600000381557,
+        "lsp_baseline_ms": 1659.4120649999695,
+        "lsp_apply_ms": 0.1513119998435286,
+        "lsp_wait_ms": 1631.6419170000245,
+        "lsp_total_ms": 3291.422680000096,
+        "total_ms": 3293.054244000132
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/__version__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0452520000635559,
+        "ast_ms": 0.1569470000504225,
+        "lsp_baseline_ms": 0.2282580001065071,
+        "lsp_apply_ms": 0.11916300013581349,
+        "lsp_wait_ms": 1678.452616999948,
+        "lsp_total_ms": 1678.9841219999744,
+        "total_ms": 1679.8134880000362
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/__version__.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.05433699993773189,
+        "ast_ms": 0.18761199999062228,
+        "lsp_baseline_ms": 0.1931819999754225,
+        "lsp_apply_ms": 0.15494299987039994,
+        "lsp_wait_ms": 1406.7306160000044,
+        "lsp_total_ms": 1407.254551000051,
+        "total_ms": 1408.1593349999366
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/__version__.py:16: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/__version__.py:16: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/__version__.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.033461999919381924,
+        "ast_ms": 0.2167099999041966,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.26033799986180384
+      },
+      "message": "src/requests/__version__.py: [syntax_error] syntax error introduced near line 16"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/_internal_utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.014070999895920977,
+        "ast_ms": 0.3609909999795491,
+        "lsp_baseline_ms": 1660.1788920002036,
+        "lsp_apply_ms": 0.16384200011998473,
+        "lsp_wait_ms": 1757.7075689998765,
+        "lsp_total_ms": 3418.2560740000554,
+        "total_ms": 3424.2621230000623
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/_internal_utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04178799986220838,
+        "ast_ms": 0.35835099993164476,
+        "lsp_baseline_ms": 0.481526999919879,
+        "lsp_apply_ms": 0.16038600006140769,
+        "lsp_wait_ms": 1677.6434519999839,
+        "lsp_total_ms": 1678.5398959998474,
+        "total_ms": 1684.0293120001206
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/_internal_utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04967599988958682,
+        "ast_ms": 0.45672900000681693,
+        "lsp_baseline_ms": 0.4627910000181146,
+        "lsp_apply_ms": 0.1555070000449632,
+        "lsp_wait_ms": 1705.384198000047,
+        "lsp_total_ms": 1706.2466730001233,
+        "total_ms": 1711.5276800000174
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/_internal_utils.py:53: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/_internal_utils.py:53: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/_internal_utils.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.042106000137209776,
+        "ast_ms": 0.5870140000752144,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.6438200000502547
+      },
+      "message": "src/requests/_internal_utils.py: [syntax_error] syntax error introduced near line 53"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/_types.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.018219000139652053,
+        "ast_ms": 1.0947330001727096,
+        "lsp_baseline_ms": 1637.6593519999005,
+        "lsp_apply_ms": 0.25167900002998067,
+        "lsp_wait_ms": 1723.9379459999782,
+        "lsp_total_ms": 3362.057762999939,
+        "total_ms": 3364.0933589999804
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/_types.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05093799995847803,
+        "ast_ms": 1.4476019998710399,
+        "lsp_baseline_ms": 0.45722899994871113,
+        "lsp_apply_ms": 0.20096200000807585,
+        "lsp_wait_ms": 1720.6128579998676,
+        "lsp_total_ms": 1721.5048959999422,
+        "total_ms": 1723.984558000211
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/_types.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.041472000020803534,
+        "ast_ms": 1.2936209998315462,
+        "lsp_baseline_ms": 0.398043999894071,
+        "lsp_apply_ms": 0.1799140000002808,
+        "lsp_wait_ms": 1390.939021000122,
+        "lsp_total_ms": 1391.7619910000667,
+        "total_ms": 1393.9107539999895
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/_types.py:190: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/_types.py:190: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/_types.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04245199988872628,
+        "ast_ms": 1.9936810001581762,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.0516460001545056
+      },
+      "message": "src/requests/_types.py: [syntax_error] syntax error introduced near line 190"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/adapters.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.022377000050255447,
+        "ast_ms": 5.060209000021132,
+        "lsp_baseline_ms": 1387.4470499999916,
+        "lsp_apply_ms": 0.30519399979311856,
+        "lsp_wait_ms": 1377.7781849998973,
+        "lsp_total_ms": 2765.7073100001526,
+        "total_ms": 2785.4796019998957
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/adapters.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.06697399999211484,
+        "ast_ms": 5.777860000080182,
+        "lsp_baseline_ms": 0.6158290000257693,
+        "lsp_apply_ms": 0.28128500002821966,
+        "lsp_wait_ms": 1563.467725999999,
+        "lsp_total_ms": 1564.5856219998677,
+        "total_ms": 1584.5647870000903
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/adapters.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.05837900016558706,
+        "ast_ms": 5.520306999869717,
+        "lsp_baseline_ms": 0.8842330000788934,
+        "lsp_apply_ms": 0.24394999991272925,
+        "lsp_wait_ms": 1354.634347000001,
+        "lsp_total_ms": 1355.98112699995,
+        "total_ms": 1377.8168129999813
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/adapters.py:750: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/adapters.py:750: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/adapters.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04095200006304367,
+        "ast_ms": 5.0284879998798715,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 5.087886999945113
+      },
+      "message": "src/requests/adapters.py: [syntax_error] syntax error introduced near line 750"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/api.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.02533300016693829,
+        "ast_ms": 0.6825560001288977,
+        "lsp_baseline_ms": 0.08963300001596508,
+        "lsp_apply_ms": 0.104223000107595,
+        "lsp_wait_ms": 1496.126355000115,
+        "lsp_total_ms": 1496.469905999902,
+        "total_ms": 1497.72163800003
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/api.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04375699995762261,
+        "ast_ms": 0.8501069999056199,
+        "lsp_baseline_ms": 0.09073700016415387,
+        "lsp_apply_ms": 0.11378999988664873,
+        "lsp_wait_ms": 1717.345054000134,
+        "lsp_total_ms": 1717.6698500002203,
+        "total_ms": 1718.859527999939
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/api.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04261899994162377,
+        "ast_ms": 0.7197180000275694,
+        "lsp_baseline_ms": 0.08007300016288355,
+        "lsp_apply_ms": 0.11268399998698442,
+        "lsp_wait_ms": 1415.4019259999586,
+        "lsp_total_ms": 1415.7266199999867,
+        "total_ms": 1416.8149770000582
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/api.py:182: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/api.py:182: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/api.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03466299995125155,
+        "ast_ms": 0.9689019998404547,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.0146230001737422
+      },
+      "message": "src/requests/api.py: [syntax_error] syntax error introduced near line 182"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/auth.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.018879999970522476,
+        "ast_ms": 2.5346909999370837,
+        "lsp_baseline_ms": 0.5166529999769409,
+        "lsp_apply_ms": 0.20061999998688407,
+        "lsp_wait_ms": 1368.2294550001188,
+        "lsp_total_ms": 1369.1618280001876,
+        "total_ms": 1385.241816999951
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/auth.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.046303000090119895,
+        "ast_ms": 2.7871340000729106,
+        "lsp_baseline_ms": 0.6117640000411484,
+        "lsp_apply_ms": 0.19067200014433183,
+        "lsp_wait_ms": 1532.1223630000986,
+        "lsp_total_ms": 1533.1840979999924,
+        "total_ms": 1553.2948110001144
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/auth.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.6010820000028616,
+        "ast_ms": 2.8287329998875066,
+        "lsp_baseline_ms": 0.5830959999002516,
+        "lsp_apply_ms": 0.18807099991136056,
+        "lsp_wait_ms": 1540.966113999957,
+        "lsp_total_ms": 1541.9548260001648,
+        "total_ms": 1564.7201439999208
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/auth.py:356: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/auth.py:356: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/auth.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05129300006956328,
+        "ast_ms": 4.9498360001507535,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 5.024864000006346
+      },
+      "message": "src/requests/auth.py: [syntax_error] syntax error introduced near line 356"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/certs.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.029920000088168308,
+        "ast_ms": 0.13093799998387112,
+        "lsp_baseline_ms": 1539.6694389999084,
+        "lsp_apply_ms": 0.11237499984417809,
+        "lsp_wait_ms": 1484.0689559998737,
+        "lsp_total_ms": 3023.9918149998175,
+        "total_ms": 3024.4607209999685
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/certs.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04311900011089165,
+        "ast_ms": 0.2088870000989118,
+        "lsp_baseline_ms": 0.11268700018263189,
+        "lsp_apply_ms": 0.09220400011145102,
+        "lsp_wait_ms": 1785.7104209999761,
+        "lsp_total_ms": 1786.04376699991,
+        "total_ms": 1786.6021830000136
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/certs.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.09236000005330425,
+        "ast_ms": 0.1628090001304372,
+        "lsp_baseline_ms": 0.12695099985648994,
+        "lsp_apply_ms": 0.12760799995703564,
+        "lsp_wait_ms": 1589.7847590001675,
+        "lsp_total_ms": 1590.1846819999719,
+        "total_ms": 1590.901772000052
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/certs.py:20: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/certs.py:20: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/certs.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.041688000010253745,
+        "ast_ms": 0.28453900017666456,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.33744299980753567
+      },
+      "message": "src/requests/certs.py: [syntax_error] syntax error introduced near line 20"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/compat.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.023624000050403993,
+        "ast_ms": 0.7308399999601534,
+        "lsp_baseline_ms": 1578.0263219999142,
+        "lsp_apply_ms": 0.33805799989750085,
+        "lsp_wait_ms": 1700.962815999901,
+        "lsp_total_ms": 3279.672994000066,
+        "total_ms": 3299.596402999896
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/compat.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04697400004260999,
+        "ast_ms": 0.7062070001211396,
+        "lsp_baseline_ms": 0.980751000042801,
+        "lsp_apply_ms": 0.29728100003012514,
+        "lsp_wait_ms": 1729.813986000181,
+        "lsp_total_ms": 1731.4862059999996,
+        "total_ms": 1752.0705959998395
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/compat.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.05878400020264962,
+        "ast_ms": 0.8719769998606353,
+        "lsp_baseline_ms": 1.2999169998693105,
+        "lsp_apply_ms": 0.2601879998564982,
+        "lsp_wait_ms": 1761.7101410000942,
+        "lsp_total_ms": 1763.6338160000378,
+        "total_ms": 1783.46413700001
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/compat.py:117: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/compat.py:117: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/compat.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 14,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04037300004711142,
+        "ast_ms": 2.1450369999911345,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.2112169999672915
+      },
+      "message": "src/requests/compat.py: [syntax_error] syntax error introduced near line 117"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/cookies.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03893999996762432,
+        "ast_ms": 4.500073999906817,
+        "lsp_baseline_ms": 0.49915299996428075,
+        "lsp_apply_ms": 0.32173199997487245,
+        "lsp_wait_ms": 1628.4553519999463,
+        "lsp_total_ms": 1629.5600920000197,
+        "total_ms": 1651.7658710001797
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/cookies.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.046237999868026236,
+        "ast_ms": 3.725477999978466,
+        "lsp_baseline_ms": 0.7566320000478299,
+        "lsp_apply_ms": 0.24509900003977236,
+        "lsp_wait_ms": 1470.8728109999356,
+        "lsp_total_ms": 1472.1353660002023,
+        "total_ms": 1496.7958940001154
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/cookies.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.040284000078827376,
+        "ast_ms": 3.540897999982917,
+        "lsp_baseline_ms": 0.8237189999817929,
+        "lsp_apply_ms": 0.24538399998164095,
+        "lsp_wait_ms": 1409.313357000201,
+        "lsp_total_ms": 1410.6297280000035,
+        "total_ms": 1430.9614199999032
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/cookies.py:627: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/cookies.py:627: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/cookies.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03711399995154352,
+        "ast_ms": 4.774044999976468,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 4.828552999924796
+      },
+      "message": "src/requests/cookies.py: [syntax_error] syntax error introduced near line 627"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/exceptions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.023436999981640838,
+        "ast_ms": 0.6727519999003562,
+        "lsp_baseline_ms": 0.4012080000848073,
+        "lsp_apply_ms": 0.15338299999712035,
+        "lsp_wait_ms": 1675.3413260000798,
+        "lsp_total_ms": 1676.1408400000164,
+        "total_ms": 1691.405492000058
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/exceptions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.046301000111270696,
+        "ast_ms": 0.8856889999151463,
+        "lsp_baseline_ms": 0.6653620000633964,
+        "lsp_apply_ms": 0.18741999997473613,
+        "lsp_wait_ms": 1645.101810000142,
+        "lsp_total_ms": 1646.1810339999374,
+        "total_ms": 1684.3895039999097
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/exceptions.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.048636000201440766,
+        "ast_ms": 1.0127880000254663,
+        "lsp_baseline_ms": 0.6825660000231437,
+        "lsp_apply_ms": 0.1748810000208323,
+        "lsp_wait_ms": 1769.5096549998652,
+        "lsp_total_ms": 1770.5890350000573,
+        "total_ms": 1786.790375999999
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/exceptions.py:164: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/exceptions.py:164: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/exceptions.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04194300004201068,
+        "ast_ms": 1.0376430000178516,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.0942979999981617
+      },
+      "message": "src/requests/exceptions.py: [syntax_error] syntax error introduced near line 164"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/help.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05588999988503929,
+        "ast_ms": 0.8811289999357541,
+        "lsp_baseline_ms": 1644.4171590001133,
+        "lsp_apply_ms": 0.1364810000268335,
+        "lsp_wait_ms": 425.0769919999584,
+        "lsp_total_ms": 2069.762877999892,
+        "total_ms": 2071.008023999866
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/help.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05490400008056895,
+        "ast_ms": 1.4762480000172218,
+        "lsp_baseline_ms": 0.10567200001787569,
+        "lsp_apply_ms": 0.14236000015444006,
+        "lsp_wait_ms": 422.04466199996205,
+        "lsp_total_ms": 422.45012199987286,
+        "total_ms": 424.49095999995734
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/help.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04493100004765438,
+        "ast_ms": 1.168424000070445,
+        "lsp_baseline_ms": 0.07716200002505502,
+        "lsp_apply_ms": 0.10537699995438743,
+        "lsp_wait_ms": 425.3303349998987,
+        "lsp_total_ms": 425.64521300005254,
+        "total_ms": 427.22143099990717
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/help.py:134: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/help.py:134: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/help.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03362799998285482,
+        "ast_ms": 1.4033170000402606,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.4491570000245702
+      },
+      "message": "src/requests/help.py: [syntax_error] syntax error introduced near line 134"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/hooks.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05466200013870548,
+        "ast_ms": 0.2784629998586752,
+        "lsp_baseline_ms": 0.42606900001374015,
+        "lsp_apply_ms": 0.1416770001014811,
+        "lsp_wait_ms": 1514.7448010000062,
+        "lsp_total_ms": 1515.4873410001528,
+        "total_ms": 1529.6591879998687
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/hooks.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05232900002738461,
+        "ast_ms": 0.6350480000492098,
+        "lsp_baseline_ms": 0.5167090000668395,
+        "lsp_apply_ms": 0.14559500004907022,
+        "lsp_wait_ms": 1676.0762979999981,
+        "lsp_total_ms": 1677.0607839998775,
+        "total_ms": 1694.2900879998888
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/hooks.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04839300004277902,
+        "ast_ms": 0.4900060000636586,
+        "lsp_baseline_ms": 0.5187570000089181,
+        "lsp_apply_ms": 0.1871510000910348,
+        "lsp_wait_ms": 1545.1779300001363,
+        "lsp_total_ms": 1546.108871999877,
+        "total_ms": 1563.3263219999662
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/hooks.py:50: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/hooks.py:50: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/hooks.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.049225999873669934,
+        "ast_ms": 0.8345879998614691,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.9090290000131063
+      },
+      "message": "src/requests/hooks.py: [syntax_error] syntax error introduced near line 50"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/models.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.024678000045241788,
+        "ast_ms": 7.029174000081184,
+        "lsp_baseline_ms": 0.7559480000054464,
+        "lsp_apply_ms": 0.33046499993361067,
+        "lsp_wait_ms": 1676.583470999958,
+        "lsp_total_ms": 1677.9571760000636,
+        "total_ms": 1700.2938119999271
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/models.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.049712999953044346,
+        "ast_ms": 7.617308000135381,
+        "lsp_baseline_ms": 0.786230999892723,
+        "lsp_apply_ms": 0.35159999993084057,
+        "lsp_wait_ms": 1585.7437559998289,
+        "lsp_total_ms": 1587.1566640000765,
+        "total_ms": 1609.6069250002074
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/models.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.048379999952885555,
+        "ast_ms": 7.491315000152099,
+        "lsp_baseline_ms": 1.6438010000001668,
+        "lsp_apply_ms": 0.4052009999213624,
+        "lsp_wait_ms": 1407.4196399999437,
+        "lsp_total_ms": 1409.8156350000863,
+        "total_ms": 1438.4812890000376
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:1186: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/models.py:1186: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/models.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 11,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05595699985860847,
+        "ast_ms": 14.199878999988869,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 14.285516999962056
+      },
+      "message": "src/requests/models.py: [syntax_error] syntax error introduced near line 1186"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/packages.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.027419999923949945,
+        "ast_ms": 0.2845300000444695,
+        "lsp_baseline_ms": 0.06714899996040913,
+        "lsp_apply_ms": 0.09723899984237505,
+        "lsp_wait_ms": 1475.030003000029,
+        "lsp_total_ms": 1475.3363589998116,
+        "total_ms": 1475.9606499999336
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/packages.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.048474999857717194,
+        "ast_ms": 0.3815510001459188,
+        "lsp_baseline_ms": 0.08114000002024113,
+        "lsp_apply_ms": 0.10303300018676964,
+        "lsp_wait_ms": 1746.1106630000813,
+        "lsp_total_ms": 1746.4542529999108,
+        "total_ms": 1747.2688850000395
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/packages.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.045652000153495464,
+        "ast_ms": 0.42434900001353526,
+        "lsp_baseline_ms": 0.08245999993050646,
+        "lsp_apply_ms": 0.13502799993148074,
+        "lsp_wait_ms": 1561.4989799998966,
+        "lsp_total_ms": 1561.8909639999856,
+        "total_ms": 1562.686630999906
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/packages.py:25: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/packages.py:25: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/packages.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03428600007282512,
+        "ast_ms": 0.480237000147099,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.5258129999674566
+      },
+      "message": "src/requests/packages.py: [syntax_error] syntax error introduced near line 25"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/sessions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.021840000044903718,
+        "ast_ms": 5.2798579999944195,
+        "lsp_baseline_ms": 0.38147999998727755,
+        "lsp_apply_ms": 0.23493100002269784,
+        "lsp_wait_ms": 1529.32994899993,
+        "lsp_total_ms": 1530.134529000179,
+        "total_ms": 1549.6595849999721
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/sessions.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05736499997510691,
+        "ast_ms": 8.998831000099017,
+        "lsp_baseline_ms": 0.5988129998968361,
+        "lsp_apply_ms": 0.3371319999132538,
+        "lsp_wait_ms": 1603.3436829998209,
+        "lsp_total_ms": 1604.4908050000686,
+        "total_ms": 1628.3303019999948
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/sessions.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.047892999873511144,
+        "ast_ms": 5.426983000006658,
+        "lsp_baseline_ms": 0.452519000191387,
+        "lsp_apply_ms": 0.236676999975316,
+        "lsp_wait_ms": 1573.9482239998779,
+        "lsp_total_ms": 1574.831760999814,
+        "total_ms": 1595.6767939999281
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/sessions.py:922: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/sessions.py:922: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/sessions.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04376299989417021,
+        "ast_ms": 8.881200000132594,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 8.946006000087436
+      },
+      "message": "src/requests/sessions.py: [syntax_error] syntax error introduced near line 922"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/status_codes.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.027067000019087573,
+        "ast_ms": 1.057497000147123,
+        "lsp_baseline_ms": 1744.698877000019,
+        "lsp_apply_ms": 0.17335300003651355,
+        "lsp_wait_ms": 1740.1787310000145,
+        "lsp_total_ms": 3485.219741999799,
+        "total_ms": 3486.9333239998923
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/status_codes.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.11911700016753457,
+        "ast_ms": 1.4613340001687902,
+        "lsp_baseline_ms": 0.2684769999632408,
+        "lsp_apply_ms": 0.18927199994323018,
+        "lsp_wait_ms": 1933.0982520000362,
+        "lsp_total_ms": 1933.723111999825,
+        "total_ms": 1936.1471709999023
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/status_codes.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.04628900001080183,
+        "ast_ms": 1.2583959999119543,
+        "lsp_baseline_ms": 0.21524299995689944,
+        "lsp_apply_ms": 0.15692900001340604,
+        "lsp_wait_ms": 1657.497893999789,
+        "lsp_total_ms": 1658.033266000075,
+        "total_ms": 1660.064446999968
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/status_codes.py:130: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/status_codes.py:130: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/status_codes.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05243900000095891,
+        "ast_ms": 1.7518119998385373,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.823435000005702
+      },
+      "message": "src/requests/status_codes.py: [syntax_error] syntax error introduced near line 130"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/structures.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.022154999896883965,
+        "ast_ms": 0.8372970000891655,
+        "lsp_baseline_ms": 1536.1933290000707,
+        "lsp_apply_ms": 0.34125799993489636,
+        "lsp_wait_ms": 1542.0322239999678,
+        "lsp_total_ms": 3078.8348249998307,
+        "total_ms": 3098.016192000159
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/structures.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.046900999905119534,
+        "ast_ms": 1.019571999904656,
+        "lsp_baseline_ms": 0.7970649999151647,
+        "lsp_apply_ms": 0.2043550000507821,
+        "lsp_wait_ms": 1576.3136059999852,
+        "lsp_total_ms": 1577.615754000135,
+        "total_ms": 1601.0293760000422
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/structures.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.0473029999739083,
+        "ast_ms": 1.286287999846536,
+        "lsp_baseline_ms": 0.7570420000320155,
+        "lsp_apply_ms": 0.2473019999342796,
+        "lsp_wait_ms": 1652.3063350000484,
+        "lsp_total_ms": 1653.6452309999277,
+        "total_ms": 1676.0079569999107
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/structures.py:132: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/structures.py:132: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/structures.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 9,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.12617800007319602,
+        "ast_ms": 1.9979310000053374,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.146719999927882
+      },
+      "message": "src/requests/structures.py: [syntax_error] syntax error introduced near line 132"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/requests/utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.02482300010342442,
+        "ast_ms": 9.77186500017524,
+        "lsp_baseline_ms": 0.2937010001460294,
+        "lsp_apply_ms": 0.26852699988921813,
+        "lsp_wait_ms": 1668.554960999927,
+        "lsp_total_ms": 1669.4257359999938,
+        "total_ms": 1685.7837380000547
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/requests/utils.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.053839999964111485,
+        "ast_ms": 7.534406999866405,
+        "lsp_baseline_ms": 0.6778839999697084,
+        "lsp_apply_ms": 0.30098499996711325,
+        "lsp_wait_ms": 1709.286223999925,
+        "lsp_total_ms": 1710.530738999978,
+        "total_ms": 1723.3602109999993
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/requests/utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.0605230000019219,
+        "ast_ms": 7.48394900006133,
+        "lsp_baseline_ms": 0.49289899993709696,
+        "lsp_apply_ms": 0.2810949999911827,
+        "lsp_wait_ms": 1755.2479790001598,
+        "lsp_total_ms": 1756.2521730001208,
+        "total_ms": 1769.360979999874
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/utils.py:1157: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]\nsrc/requests/utils.py:1157: Type of \"_patchgate_probe\" is unknown [reportUnknownVariableType]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/requests/utils.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04410800011100946,
+        "ast_ms": 9.965765000060856,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 10.033219000206373
+      },
+      "message": "src/requests/utils.py: [syntax_error] syntax error introduced near line 1157"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/_internal_utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.039787999867257895,
+        "ast_ms": 0.4279949998817756,
+        "lsp_baseline_ms": 0.29162500004531466,
+        "lsp_apply_ms": 0.1918570001180342,
+        "lsp_wait_ms": 1555.0886829998944,
+        "lsp_total_ms": 1555.8150300000761,
+        "total_ms": 1561.6275200000018
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:528: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\ntests/test_utils.py:822: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/_types.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 14,
+      "timings": {
+        "policy_ms": 0.026507000029596384,
+        "ast_ms": 1.2657930001296336,
+        "lsp_baseline_ms": 0.2612340001633129,
+        "lsp_apply_ms": 0.18593100003272411,
+        "lsp_wait_ms": 1432.8727900001468,
+        "lsp_total_ms": 1433.569936999902,
+        "total_ms": 1435.9023539998361
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:163: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/models.py:164: Type \"Iterable[tuple[Any, Any]] | SupportsItems[Any, Any] | SupportsRead[str | bytes]\" is not assignable to return type "
+    },
+    {
+      "case": "fixed_signature_multifile",
+      "file": "src/requests/_types.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 7,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04667700000027253,
+        "ast_ms": 8.371169999918493,
+        "lsp_baseline_ms": 0.6355569998959254,
+        "lsp_apply_ms": 0.41477200011286186,
+        "lsp_wait_ms": 1638.4110909998526,
+        "lsp_total_ms": 1639.7862179999265,
+        "total_ms": 1663.839641000095
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/auth.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 5,
+      "n_net_new": 7,
+      "timings": {
+        "policy_ms": 0.08875599996827077,
+        "ast_ms": 2.6013130000137608,
+        "lsp_baseline_ms": 0.5829440001434705,
+        "lsp_apply_ms": 0.177804000031756,
+        "lsp_wait_ms": 1442.6119649999691,
+        "lsp_total_ms": 1443.575661000068,
+        "total_ms": 1461.1497820001205
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/auth.py:112: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/auth.py:120: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/adapters.py:630: Argument missing for pa"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/cookies.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 6,
+      "timings": {
+        "policy_ms": 0.023427000087394845,
+        "ast_ms": 3.5867880001205776,
+        "lsp_baseline_ms": 0.5628440001146373,
+        "lsp_apply_ms": 0.23790099999132508,
+        "lsp_wait_ms": 1422.198847000118,
+        "lsp_total_ms": 1423.2670569999755,
+        "total_ms": 1444.9114389999522
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/adapters.py:395: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/auth.py:304: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/sessions.py:267: Argument missing fo"
+    },
+    {
+      "case": "fixed_signature_multifile",
+      "file": "src/requests/cookies.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 8,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.06441000004997477,
+        "ast_ms": 15.074878999939756,
+        "lsp_baseline_ms": 0.49201000001630746,
+        "lsp_apply_ms": 2.883582999857026,
+        "lsp_wait_ms": 1937.7620810000735,
+        "lsp_total_ms": 1941.4840840001943,
+        "total_ms": 1979.8514399999476
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/hooks.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.044582000100490404,
+        "ast_ms": 0.48094499993567297,
+        "lsp_baseline_ms": 0.5047249999279302,
+        "lsp_apply_ms": 0.1468869998006994,
+        "lsp_wait_ms": 1583.9181960000133,
+        "lsp_total_ms": 1584.7931810001228,
+        "total_ms": 1602.180694000026
+      },
+      "message": "New static-analysis errors introduced by this batch:\ntests/test_hooks.py:18: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/requests/utils.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 22,
+      "timings": {
+        "policy_ms": 0.030622999929619255,
+        "ast_ms": 6.950524999865593,
+        "lsp_baseline_ms": 0.37521100011872477,
+        "lsp_apply_ms": 0.2815740001551603,
+        "lsp_wait_ms": 1466.9387440001174,
+        "lsp_total_ms": 1467.806223000025,
+        "total_ms": 1479.7307199999068
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/requests/models.py:605: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/requests/models.py:605: Type of \"length\" is unknown [reportUnknownVariableType]\nsrc/requests/models.py:628: Argument type is unknown\n\u00a0\u00a0Argument "
+    }
+  ]
+}

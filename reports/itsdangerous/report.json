@@ -1,0 +1,1389 @@
+{
+  "environment": {
+    "repo": "itsdangerous",
+    "repo_commit": "672971d",
+    "python_files_in_repo": 8,
+    "files_sampled": 8,
+    "samples_requested": 10,
+    "dependents_per_sampled_file (mean/max)": "4.0/10",
+    "pyright": "pyright 1.1.414",
+    "python": "3.13.18",
+    "os": "Linux 6.18.44-fc-v653",
+    "lsp.python_path": "/home/claude/patchgate/.venv/bin/python",
+    "lsp.timeout_sec": 10,
+    "lsp.quiescence_ms": 150,
+    "wall_time_sec (both passes)": 54.0,
+    "fixed_signature cases skipped": "{\"fixed_signature_protected_callers\": 1, \"fixed_signature_generation_error\": 0}"
+  },
+  "with_loose_fallback": {
+    "matrix": {
+      "benign_comment": {
+        "ACCEPTED": 8
+      },
+      "benign_whitespace": {
+        "ACCEPTED": 8
+      },
+      "broken_undefined_name": {
+        "REJECTED_LSP": 8
+      },
+      "broken_syntax": {
+        "REJECTED_AST": 8
+      },
+      "broken_signature": {
+        "REJECTED_LSP": 2
+      },
+      "fixed_signature_multifile": {
+        "ACCEPTED": 1
+      }
+    },
+    "counts": {
+      "benign_comment": 8,
+      "benign_whitespace": 8,
+      "broken_undefined_name": 8,
+      "broken_syntax": 8,
+      "broken_signature": 2,
+      "fixed_signature_multifile": 1
+    },
+    "false_block_rate_benign": 0.0,
+    "false_blocks_benign": "0/16",
+    "false_block_rate_fixed_signature": 0.0,
+    "false_blocks_fixed_signature": "0/1",
+    "miss_rate_broken": 0.0,
+    "misses_broken": "0/18",
+    "timeouts": 0,
+    "unexpected": []
+  },
+  "without_loose_fallback": {
+    "matrix": {
+      "benign_comment": {
+        "ACCEPTED": 8
+      },
+      "benign_whitespace": {
+        "ACCEPTED": 8
+      },
+      "broken_undefined_name": {
+        "REJECTED_LSP": 8
+      },
+      "broken_syntax": {
+        "REJECTED_AST": 8
+      },
+      "broken_signature": {
+        "REJECTED_LSP": 2
+      },
+      "fixed_signature_multifile": {
+        "ACCEPTED": 1
+      }
+    },
+    "counts": {
+      "benign_comment": 8,
+      "benign_whitespace": 8,
+      "broken_undefined_name": 8,
+      "broken_syntax": 8,
+      "broken_signature": 2,
+      "fixed_signature_multifile": 1
+    },
+    "false_block_rate_benign": 0.0,
+    "false_blocks_benign": "0/16",
+    "false_block_rate_fixed_signature": 0.0,
+    "false_blocks_fixed_signature": "0/1",
+    "miss_rate_broken": 0.0,
+    "misses_broken": "0/18",
+    "timeouts": 0,
+    "unexpected": []
+  },
+  "latency": {
+    "cold": {
+      "total_ms": {
+        "count": 1,
+        "p50": 1101.215576999948,
+        "p95": 1101.215576999948,
+        "p99": 1101.215576999948
+      },
+      "lsp_total_ms": {
+        "count": 1,
+        "p50": 921.4864229999193,
+        "p95": 921.4864229999193,
+        "p99": 921.4864229999193
+      }
+    },
+    "warm": {
+      "total_ms": {
+        "count": 34,
+        "p50": 545.113899999933,
+        "p95": 1569.6207500000128,
+        "p99": 1589.5956229999229
+      },
+      "lsp_total_ms": {
+        "count": 26,
+        "p50": 579.3934929999978,
+        "p95": 1568.5466560000805,
+        "p99": 1588.7680009999485
+      }
+    },
+    "note": "nearest-rank percentiles; cold has n=1 per run by definition"
+  },
+  "records_with_loose_fallback": [
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03497700004118087,
+        "ast_ms": 0.21572299999661482,
+        "lsp_baseline_ms": 507.85053500010235,
+        "lsp_apply_ms": 0.15040599998883408,
+        "lsp_wait_ms": 413.32647000001543,
+        "lsp_total_ms": 921.4864229999193,
+        "total_ms": 1101.215576999948
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.08826499993119796,
+        "ast_ms": 0.24825299999520212,
+        "lsp_baseline_ms": 0.05627200005164923,
+        "lsp_apply_ms": 0.08338499992532888,
+        "lsp_wait_ms": 414.6487089999482,
+        "lsp_total_ms": 414.91742499999873,
+        "total_ms": 415.39618700005576
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.0460079999129448,
+        "ast_ms": 0.2236699999684788,
+        "lsp_baseline_ms": 0.05114600003253145,
+        "lsp_apply_ms": 0.08156499995948252,
+        "lsp_wait_ms": 417.8677840000091,
+        "lsp_total_ms": 418.11931899997035,
+        "total_ms": 418.58939999997347
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/__init__.py:19: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03600299999106937,
+        "ast_ms": 0.4017140000769359,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.44932399998742767
+      },
+      "message": "src/itsdangerous/__init__.py: [syntax_error] syntax error introduced near line 19"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/_json.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.014003000046614034,
+        "ast_ms": 0.18971800000144867,
+        "lsp_baseline_ms": 484.4901059999529,
+        "lsp_apply_ms": 0.1651110000011613,
+        "lsp_wait_ms": 442.2846060000438,
+        "lsp_total_ms": 927.1197279999797,
+        "total_ms": 927.5339959999656
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/_json.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.06311000004188827,
+        "ast_ms": 0.37880599995787634,
+        "lsp_baseline_ms": 0.09920899992721388,
+        "lsp_apply_ms": 0.12936400003127346,
+        "lsp_wait_ms": 443.3620830000109,
+        "lsp_total_ms": 443.77034700005424,
+        "total_ms": 444.4801270000198
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/_json.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.062479999996867264,
+        "ast_ms": 0.33108000002357585,
+        "lsp_baseline_ms": 0.10829200004991435,
+        "lsp_apply_ms": 0.21760799995718116,
+        "lsp_wait_ms": 459.90028899996105,
+        "lsp_total_ms": 460.4498340000873,
+        "total_ms": 461.29682699995556
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/_json.py:20: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/_json.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03749700010757806,
+        "ast_ms": 0.31680999995842285,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.36474899991389975
+      },
+      "message": "src/itsdangerous/_json.py: [syntax_error] syntax error introduced near line 20"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.016228999925260723,
+        "ast_ms": 0.4552179999564032,
+        "lsp_baseline_ms": 933.5431700000072,
+        "lsp_apply_ms": 0.175971000089703,
+        "lsp_wait_ms": 654.8290669999233,
+        "lsp_total_ms": 1588.7680009999485,
+        "total_ms": 1589.5956229999229
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04799700002422469,
+        "ast_ms": 0.4770740000594742,
+        "lsp_baseline_ms": 0.27443199996923795,
+        "lsp_apply_ms": 0.15737500007162453,
+        "lsp_wait_ms": 588.1332279999469,
+        "lsp_total_ms": 588.8194919999705,
+        "total_ms": 589.7179160000405
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.05290799992963002,
+        "ast_ms": 0.5145609999317458,
+        "lsp_baseline_ms": 0.23115399994821928,
+        "lsp_apply_ms": 0.16891799998575152,
+        "lsp_wait_ms": 543.3186489999571,
+        "lsp_total_ms": 543.9546240000936,
+        "total_ms": 545.113899999933
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/encoding.py:56: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.040308000052391435,
+        "ast_ms": 1.2772280000490355,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.3340830000743154
+      },
+      "message": "src/itsdangerous/encoding.py: [syntax_error] syntax error introduced near line 56"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/exc.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.01966100001027371,
+        "ast_ms": 0.48613000001296314,
+        "lsp_baseline_ms": 775.9494620000851,
+        "lsp_apply_ms": 0.225057000079687,
+        "lsp_wait_ms": 792.1146220000992,
+        "lsp_total_ms": 1568.5466560000805,
+        "total_ms": 1569.6207500000128
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/exc.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0532750000274973,
+        "ast_ms": 0.5356379999739147,
+        "lsp_baseline_ms": 0.3330980000555428,
+        "lsp_apply_ms": 0.20337600005859713,
+        "lsp_wait_ms": 639.8767519999637,
+        "lsp_total_ms": 640.7261869999274,
+        "total_ms": 641.9124440000132
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/exc.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.05765399998836074,
+        "ast_ms": 0.8467599999448794,
+        "lsp_baseline_ms": 0.46318499994413287,
+        "lsp_apply_ms": 0.26356299997587485,
+        "lsp_wait_ms": 677.7518850000206,
+        "lsp_total_ms": 678.9207640000541,
+        "total_ms": 680.5467110000336
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/exc.py:108: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/exc.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03934899996238528,
+        "ast_ms": 0.9279739999783487,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.9817239999847516
+      },
+      "message": "src/itsdangerous/exc.py: [syntax_error] syntax error introduced near line 108"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.024797000037324324,
+        "ast_ms": 2.7410860000145476,
+        "lsp_baseline_ms": 0.15070200004174694,
+        "lsp_apply_ms": 0.1717510000389666,
+        "lsp_wait_ms": 619.0577850001091,
+        "lsp_total_ms": 619.5677709999927,
+        "total_ms": 622.8238669999655
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.046419000000241795,
+        "ast_ms": 2.6323959999672297,
+        "lsp_baseline_ms": 0.17668600003162283,
+        "lsp_apply_ms": 0.19812799996543617,
+        "lsp_wait_ms": 638.3388130000185,
+        "lsp_total_ms": 638.9103319999094,
+        "total_ms": 642.093884000019
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.056516999961786496,
+        "ast_ms": 3.013926999983596,
+        "lsp_baseline_ms": 0.25575699999080825,
+        "lsp_apply_ms": 0.2234219999763809,
+        "lsp_wait_ms": 556.6117179999992,
+        "lsp_total_ms": 557.2682880000457,
+        "total_ms": 560.8784009999681
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/serializer.py:406: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03828600006272609,
+        "ast_ms": 4.209211999977924,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 4.265162999899985
+      },
+      "message": "src/itsdangerous/serializer.py: [syntax_error] syntax error introduced near line 406"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/signer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.030058000106691907,
+        "ast_ms": 1.5976580000369722,
+        "lsp_baseline_ms": 0.18788499994570884,
+        "lsp_apply_ms": 0.1731359999439519,
+        "lsp_wait_ms": 572.1274369999492,
+        "lsp_total_ms": 572.7182199999561,
+        "total_ms": 574.9324009999555
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/signer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.046599000029345916,
+        "ast_ms": 1.511491000087517,
+        "lsp_baseline_ms": 0.2626689999942755,
+        "lsp_apply_ms": 0.18370299994785455,
+        "lsp_wait_ms": 578.7495869999475,
+        "lsp_total_ms": 579.3934929999978,
+        "total_ms": 581.4365210000005
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/signer.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.05013899999539717,
+        "ast_ms": 1.5965960000130508,
+        "lsp_baseline_ms": 0.22893599998496938,
+        "lsp_apply_ms": 0.19938599996294215,
+        "lsp_wait_ms": 585.0543840000455,
+        "lsp_total_ms": 585.7103409999809,
+        "total_ms": 588.0159360000334
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/signer.py:268: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/signer.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.06335900002341077,
+        "ast_ms": 1.994684999999663,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.0728229999349423
+      },
+      "message": "src/itsdangerous/signer.py: [syntax_error] syntax error introduced near line 268"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/timed.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.020478999999795633,
+        "ast_ms": 1.3197780000382409,
+        "lsp_baseline_ms": 0.10236799994345347,
+        "lsp_apply_ms": 0.13966400001663715,
+        "lsp_wait_ms": 589.3400579999479,
+        "lsp_total_ms": 589.7712269999147,
+        "total_ms": 591.4570569999569
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/timed.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05137100004048989,
+        "ast_ms": 1.5254689999437687,
+        "lsp_baseline_ms": 0.13173999991522578,
+        "lsp_apply_ms": 0.16249899999820627,
+        "lsp_wait_ms": 483.05112800005645,
+        "lsp_total_ms": 483.5134340000877,
+        "total_ms": 485.46754300002704
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/timed.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.056155999914153654,
+        "ast_ms": 2.1041700000523633,
+        "lsp_baseline_ms": 0.16374000006180722,
+        "lsp_apply_ms": 0.22997099995336612,
+        "lsp_wait_ms": 475.4486369999995,
+        "lsp_total_ms": 476.0478090000788,
+        "total_ms": 478.70941100006803
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/timed.py:230: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/timed.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05913200004670216,
+        "ast_ms": 3.1760619999658957,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 3.261071999986598
+      },
+      "message": "src/itsdangerous/timed.py: [syntax_error] syntax error introduced near line 230"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0406890000022031,
+        "ast_ms": 0.7397120000405266,
+        "lsp_baseline_ms": 484.3944740000552,
+        "lsp_apply_ms": 0.17839299994193425,
+        "lsp_wait_ms": 461.09558700004527,
+        "lsp_total_ms": 946.1711330000071,
+        "total_ms": 947.3124369999368
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.07412200000089797,
+        "ast_ms": 0.6178969999837136,
+        "lsp_baseline_ms": 0.1262090000864191,
+        "lsp_apply_ms": 0.11854499996388768,
+        "lsp_wait_ms": 453.700710000021,
+        "lsp_total_ms": 454.0896099999827,
+        "total_ms": 455.02299100007804
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.05124699998759752,
+        "ast_ms": 0.5755790000421257,
+        "lsp_baseline_ms": 0.08834499999466061,
+        "lsp_apply_ms": 0.11645899996892695,
+        "lsp_wait_ms": 456.3456480000241,
+        "lsp_total_ms": 456.69450699995195,
+        "total_ms": 457.5655129999632
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/url_safe.py:85: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.038200999938453606,
+        "ast_ms": 0.8176449999837132,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.8670539999684479
+      },
+      "message": "src/itsdangerous/url_safe.py: [syntax_error] syntax error introduced near line 85"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 5,
+      "timings": {
+        "policy_ms": 0.06326799996259069,
+        "ast_ms": 1.34030399999574,
+        "lsp_baseline_ms": 0.6585229999700459,
+        "lsp_apply_ms": 0.4325029999563412,
+        "lsp_wait_ms": 601.4710399999785,
+        "lsp_total_ms": 602.9082899999594,
+        "total_ms": 605.2501570000004
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/signer.py:220: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/itsdangerous/timed.py:48: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/itsdangerous/timed.py:51: Operator \"+\" "
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/itsdangerous/signer.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.022895000029166113,
+        "ast_ms": 1.4825279999968188,
+        "lsp_baseline_ms": 0.19565699994927854,
+        "lsp_apply_ms": 0.16870700005711114,
+        "lsp_wait_ms": 631.173782000019,
+        "lsp_total_ms": 631.7676349999601,
+        "total_ms": 634.1093940000064
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/signer.py:143: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/itsdangerous/serializer.py:208: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]"
+    },
+    {
+      "case": "fixed_signature_multifile",
+      "file": "src/itsdangerous/signer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05075499996110011,
+        "ast_ms": 5.314912000017102,
+        "lsp_baseline_ms": 0.1572240000768943,
+        "lsp_apply_ms": 0.26580600001580024,
+        "lsp_wait_ms": 561.644349000062,
+        "lsp_total_ms": 562.3273249999556,
+        "total_ms": 568.2854570000018
+      },
+      "message": "All checks passed."
+    }
+  ],
+  "records_without_loose_fallback": [
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03322400004890369,
+        "ast_ms": 0.27485199996135634,
+        "lsp_baseline_ms": 567.0775730000059,
+        "lsp_apply_ms": 0.10882600008699228,
+        "lsp_wait_ms": 413.694511000017,
+        "lsp_total_ms": 981.0582669999803,
+        "total_ms": 1166.7884469999308
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.04828300006920472,
+        "ast_ms": 0.22672600005080312,
+        "lsp_baseline_ms": 0.04950200002440397,
+        "lsp_apply_ms": 0.0819089999595235,
+        "lsp_wait_ms": 413.67131900005916,
+        "lsp_total_ms": 413.91305899992403,
+        "total_ms": 414.3112579999979
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.03708500003085646,
+        "ast_ms": 0.22669899999527843,
+        "lsp_baseline_ms": 0.04622699998435564,
+        "lsp_apply_ms": 0.07916100003058091,
+        "lsp_wait_ms": 414.7715569999946,
+        "lsp_total_ms": 415.01953499994215,
+        "total_ms": 415.4522049999514
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/__init__.py:19: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/__init__.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 0,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03566500004126283,
+        "ast_ms": 0.3098029999364371,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.3884899999775371
+      },
+      "message": "src/itsdangerous/__init__.py: [syntax_error] syntax error introduced near line 19"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/_json.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.013517999946088821,
+        "ast_ms": 0.1774999999497595,
+        "lsp_baseline_ms": 510.1459559999739,
+        "lsp_apply_ms": 0.11488200004805549,
+        "lsp_wait_ms": 460.4599659999167,
+        "lsp_total_ms": 970.8354849999523,
+        "total_ms": 971.138486999962
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/_json.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.043124999933752406,
+        "ast_ms": 0.2458609999393957,
+        "lsp_baseline_ms": 0.07441500008553703,
+        "lsp_apply_ms": 0.1124749999235064,
+        "lsp_wait_ms": 443.7885700000379,
+        "lsp_total_ms": 444.1959449999331,
+        "total_ms": 444.6628680000231
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/_json.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.044606000074054464,
+        "ast_ms": 0.2540810000937199,
+        "lsp_baseline_ms": 0.0729399999954694,
+        "lsp_apply_ms": 0.09258500006126269,
+        "lsp_wait_ms": 442.77378399999634,
+        "lsp_total_ms": 443.0761359999451,
+        "total_ms": 443.62911099995017
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/_json.py:20: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/_json.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 1,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.040446999946652795,
+        "ast_ms": 0.4456549999076742,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.4991769999378448
+      },
+      "message": "src/itsdangerous/_json.py: [syntax_error] syntax error introduced near line 20"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.01549000000977685,
+        "ast_ms": 0.3747160000102667,
+        "lsp_baseline_ms": 879.4872670000586,
+        "lsp_apply_ms": 0.1700719999462308,
+        "lsp_wait_ms": 597.5249969999368,
+        "lsp_total_ms": 1477.381623000042,
+        "total_ms": 1478.1205769999133
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.045221999926070566,
+        "ast_ms": 0.565486000027704,
+        "lsp_baseline_ms": 0.21444999993036618,
+        "lsp_apply_ms": 0.14792799993301742,
+        "lsp_wait_ms": 591.4884809999421,
+        "lsp_total_ms": 592.0613230000527,
+        "total_ms": 593.0521169999565
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.05585100007010624,
+        "ast_ms": 0.6767910000462507,
+        "lsp_baseline_ms": 0.30351999998856627,
+        "lsp_apply_ms": 0.1544579999972484,
+        "lsp_wait_ms": 551.1764249999942,
+        "lsp_total_ms": 551.8655690000287,
+        "total_ms": 553.2302819999586
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/encoding.py:56: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.049780000040300365,
+        "ast_ms": 1.20008900000812,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 1.2720040000431254
+      },
+      "message": "src/itsdangerous/encoding.py: [syntax_error] syntax error introduced near line 56"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/exc.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03044300001420197,
+        "ast_ms": 0.6670079999366862,
+        "lsp_baseline_ms": 781.9363500000236,
+        "lsp_apply_ms": 0.236534999999094,
+        "lsp_wait_ms": 712.8027750000001,
+        "lsp_total_ms": 1495.2270280000448,
+        "total_ms": 1496.5649850000773
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/exc.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03909600002316438,
+        "ast_ms": 0.573781999946732,
+        "lsp_baseline_ms": 0.34771599996474833,
+        "lsp_apply_ms": 0.1966529999890554,
+        "lsp_wait_ms": 622.7462289999721,
+        "lsp_total_ms": 623.6027180000292,
+        "total_ms": 624.8100489999615
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/exc.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.04633499997908075,
+        "ast_ms": 0.6021570000029897,
+        "lsp_baseline_ms": 0.31191200002922415,
+        "lsp_apply_ms": 0.2150450000044657,
+        "lsp_wait_ms": 609.8467119999214,
+        "lsp_total_ms": 610.9825419999879,
+        "total_ms": 612.7228440000181
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/exc.py:108: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/exc.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 10,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.0364059999355959,
+        "ast_ms": 0.7587610000427958,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.8835520000711767
+      },
+      "message": "src/itsdangerous/exc.py: [syntax_error] syntax error introduced near line 108"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.02921399993738305,
+        "ast_ms": 3.736373000037929,
+        "lsp_baseline_ms": 0.10835700004463433,
+        "lsp_apply_ms": 0.17131800007064157,
+        "lsp_wait_ms": 595.7836090000228,
+        "lsp_total_ms": 596.2550570000076,
+        "total_ms": 600.7562809999172
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.044003999960295914,
+        "ast_ms": 2.662044999965474,
+        "lsp_baseline_ms": 0.1723609999544351,
+        "lsp_apply_ms": 0.19298600000183797,
+        "lsp_wait_ms": 614.1843300000573,
+        "lsp_total_ms": 614.7107829999641,
+        "total_ms": 617.8277200000366
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.09290600007716421,
+        "ast_ms": 3.011221000065234,
+        "lsp_baseline_ms": 0.17514199998913682,
+        "lsp_apply_ms": 0.1820630000111123,
+        "lsp_wait_ms": 545.5276080000431,
+        "lsp_total_ms": 546.0712590000867,
+        "total_ms": 549.6962390000135
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/serializer.py:406: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/serializer.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 4,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03658799994354922,
+        "ast_ms": 3.6939399999482703,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 3.7461860000576053
+      },
+      "message": "src/itsdangerous/serializer.py: [syntax_error] syntax error introduced near line 406"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/signer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.02107699992848211,
+        "ast_ms": 1.3924980000865617,
+        "lsp_baseline_ms": 0.17360799995458365,
+        "lsp_apply_ms": 0.16374200004065642,
+        "lsp_wait_ms": 559.2844149999792,
+        "lsp_total_ms": 559.8628569999846,
+        "total_ms": 561.7318299999852
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/signer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03558399998837558,
+        "ast_ms": 1.5274580000550486,
+        "lsp_baseline_ms": 0.20936199996413052,
+        "lsp_apply_ms": 0.16776899997239525,
+        "lsp_wait_ms": 543.7139529999513,
+        "lsp_total_ms": 544.2708919999859,
+        "total_ms": 546.2859350000144
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/signer.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.050339999916104716,
+        "ast_ms": 1.5942149999546018,
+        "lsp_baseline_ms": 0.2740500000300017,
+        "lsp_apply_ms": 0.18672999999580497,
+        "lsp_wait_ms": 560.173758000019,
+        "lsp_total_ms": 560.8275870000625,
+        "total_ms": 562.9527410000037
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/signer.py:268: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/signer.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.036387000022841676,
+        "ast_ms": 2.166129999977784,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.216942000018207
+      },
+      "message": "src/itsdangerous/signer.py: [syntax_error] syntax error introduced near line 268"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/timed.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.018892999946729105,
+        "ast_ms": 1.4548870000226088,
+        "lsp_baseline_ms": 0.13837099993452284,
+        "lsp_apply_ms": 0.12996800001019437,
+        "lsp_wait_ms": 556.2599150000551,
+        "lsp_total_ms": 556.7059069999232,
+        "total_ms": 558.4878149999213
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/timed.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.08861699996032257,
+        "ast_ms": 1.3238669999964259,
+        "lsp_baseline_ms": 0.12668099998336402,
+        "lsp_apply_ms": 0.14283999996678176,
+        "lsp_wait_ms": 472.94340099995225,
+        "lsp_total_ms": 473.37537200007773,
+        "total_ms": 475.1513789999535
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/timed.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.05813100005980232,
+        "ast_ms": 1.5215399999988222,
+        "lsp_baseline_ms": 0.1364209999792365,
+        "lsp_apply_ms": 0.15580000001591543,
+        "lsp_wait_ms": 462.5757439999916,
+        "lsp_total_ms": 463.07098199997654,
+        "total_ms": 465.1046950000364
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/timed.py:230: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/timed.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 3,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.041185999975823506,
+        "ast_ms": 2.657907999946474,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 2.717383999993217
+      },
+      "message": "src/itsdangerous/timed.py: [syntax_error] syntax error introduced near line 230"
+    },
+    {
+      "case": "benign_comment",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.025466000010965217,
+        "ast_ms": 0.6443700000318131,
+        "lsp_baseline_ms": 469.81190400003925,
+        "lsp_apply_ms": 0.13900900000862748,
+        "lsp_wait_ms": 440.7942999999932,
+        "lsp_total_ms": 910.8943679999584,
+        "total_ms": 911.7524519999733
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "benign_whitespace",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.036901000044053944,
+        "ast_ms": 0.5765160000237302,
+        "lsp_baseline_ms": 0.0947119999636925,
+        "lsp_apply_ms": 0.11868100000356208,
+        "lsp_wait_ms": 439.9471250000033,
+        "lsp_total_ms": 440.31675700000505,
+        "total_ms": 441.13633899996785
+      },
+      "message": "All checks passed."
+    },
+    {
+      "case": "broken_undefined_name",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 1,
+      "timings": {
+        "policy_ms": 0.04554600002393272,
+        "ast_ms": 0.7167669999716964,
+        "lsp_baseline_ms": 0.08595099996000499,
+        "lsp_apply_ms": 0.14259799991123145,
+        "lsp_wait_ms": 439.95063299996673,
+        "lsp_total_ms": 440.35787299992535,
+        "total_ms": 441.37677999992775
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/url_safe.py:85: \"patchgate_undefined_name_xyz\" is not defined [reportUndefinedVariable]"
+    },
+    {
+      "case": "broken_syntax",
+      "file": "src/itsdangerous/url_safe.py",
+      "status": "REJECTED_AST",
+      "timed_out": false,
+      "dependents": 2,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.03437400005168456,
+        "ast_ms": 0.7788429999209256,
+        "lsp_baseline_ms": 0,
+        "lsp_apply_ms": 0,
+        "lsp_wait_ms": 0,
+        "lsp_total_ms": 0,
+        "total_ms": 0.8230259999209011
+      },
+      "message": "src/itsdangerous/url_safe.py: [syntax_error] syntax error introduced near line 85"
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/itsdangerous/encoding.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 5,
+      "timings": {
+        "policy_ms": 0.02266000001327484,
+        "ast_ms": 0.4271459999927174,
+        "lsp_baseline_ms": 0.24365100000522943,
+        "lsp_apply_ms": 0.15481000002637302,
+        "lsp_wait_ms": 561.4187969999875,
+        "lsp_total_ms": 562.0256700000255,
+        "total_ms": 562.9205430000184
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/signer.py:220: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/itsdangerous/timed.py:48: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/itsdangerous/timed.py:51: Operator \"+\" "
+    },
+    {
+      "case": "broken_signature",
+      "file": "src/itsdangerous/signer.py",
+      "status": "REJECTED_LSP",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 2,
+      "timings": {
+        "policy_ms": 0.028997000072195078,
+        "ast_ms": 2.4195270000291202,
+        "lsp_baseline_ms": 0.21750199994130526,
+        "lsp_apply_ms": 0.2720500000350512,
+        "lsp_wait_ms": 566.1671679999927,
+        "lsp_total_ms": 566.8976819999898,
+        "total_ms": 570.0405979999914
+      },
+      "message": "New static-analysis errors introduced by this batch:\nsrc/itsdangerous/signer.py:143: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]\nsrc/itsdangerous/serializer.py:208: Argument missing for parameter \"patchgate_new_param\" [reportCallIssue]"
+    },
+    {
+      "case": "fixed_signature_multifile",
+      "file": "src/itsdangerous/signer.py",
+      "status": "ACCEPTED",
+      "timed_out": false,
+      "dependents": 6,
+      "n_net_new": 0,
+      "timings": {
+        "policy_ms": 0.05615600002784049,
+        "ast_ms": 6.545909999999822,
+        "lsp_baseline_ms": 0.2648119999548726,
+        "lsp_apply_ms": 0.3122870000424882,
+        "lsp_wait_ms": 557.2570099999439,
+        "lsp_total_ms": 558.1366000000116,
+        "total_ms": 565.6551509999872
+      },
+      "message": "All checks passed."
+    }
+  ]
+}

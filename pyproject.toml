@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patchgate"
+version = "1.1.0"
+description = "Verification layer between an AI coding agent and files on disk"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2", "pyyaml", "pathspec", "mcp>=2", "tree-sitter", "tree-sitter-python", "pyright",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[project.scripts]
+patchgate = "patchgate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = ["integration: needs real Pyright"]

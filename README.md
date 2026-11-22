@@ -8,6 +8,9 @@ PatchGate is an **automated, deterministic verification layer between an AI codi
 
 Only if all three stages pass are the files written to disk (atomic per file via temporary files + `os.replace`, atomic per batch via journal and rollback). If any check fails, zero files are touched, and the agent receives structured diagnostic explanations. PatchGate treats the LLM as an **untrusted code generator**; PatchGate itself is strictly deterministic and never calls an LLM.
 
+# Archietecture
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f2e621a9-fab6-4f14-83ab-5185ce07b0c6" />
+
 ---
 
 ## What's New in v1.1
